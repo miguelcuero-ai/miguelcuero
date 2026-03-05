@@ -1,0 +1,16 @@
+# BUSCANDO EL OVERFLOW
+print("Calculando el Overflow de un float...")
+
+entrada = input("Introduce un número (ejemplo: 1e300): ")
+numero_grande = float(entrada)
+
+print(f"Número inicial: {numero_grande}")
+
+# Mientras el número NO sea infinito, sigue multiplicando
+pasos = 0
+while numero_grande != float('inf'):
+    numero_grande = numero_grande * 10
+    pasos = pasos + 1
+    print(f"Paso {pasos}: {numero_grande}")
+
+print(f"\n¡Llegaste al overflow en el paso {pasos}!")
